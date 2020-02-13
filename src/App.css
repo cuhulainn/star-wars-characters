@@ -7,6 +7,11 @@
   pointer-events: none;
 }
 
+.banner {
+  height: 20px;
+  width: 10%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,13 +20,14 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 25;
   color: white;
+  /* background-image: url(https://www.playtcg.co.za/wp-content/uploads/2017/10/star-wars-banner-home.jpg); */
 }
 
 .App-link {

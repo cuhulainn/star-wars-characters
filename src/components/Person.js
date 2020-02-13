@@ -1,16 +1,15 @@
 import React from 'react';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 const Person = props => {
     return (
-        <React.Fragment>
-            <h4>{props.name}</h4>
-            <ul>
-                <li>Height: {props.height}</li>
-                <li>Mass: {props.mass}</li>
-                <li>Gender: {props.gender}</li>
-                <li>Birth Year{props.birthYear}</li>
-            </ul>
-        </React.Fragment>
+        <TableRow hover>
+            <TableCell component="th" scope="row">{props.name}</TableCell>
+            <TableCell>{props.height}</TableCell>
+            <TableCell>{props.mass}</TableCell>
+            <TableCell>{props.birth_year}</TableCell>
+        </TableRow>
     );
 };
 
