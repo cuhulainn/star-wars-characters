@@ -1,10 +1,14 @@
 const networkCaller = (url) => {
     return fetch(url)
         .then(res => res.json() )
-        .then(peopleData => {
+        .then(returnData => {
             //console.log("People Data: ", peopleData);
-            const { results } = peopleData; // destructuring
-            return results;
+            if ('results' in returnData ) {
+                const { results } = returnData; // destructuring
+                return results;
+            } else {
+                return returnData;
+            };
         })
         .catch(err => console.log("fetch error: ", err));
 };
