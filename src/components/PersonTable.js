@@ -9,18 +9,18 @@ import TableRow from '@material-ui/core/TableRow';
 
 const PersonTable = props => {
     return(
-        <TableContainer>
-          <Table stickyHeader aria-label="sticky table">
-            <TableHead>
-              <TableRow>
+        <TableContainer key="table-container">
+          <Table stickyHeader aria-label="sticky table" key="table">
+            <TableHead key="head">
+              <TableRow key="theader">
                   <TableCell>Name</TableCell>
                   <TableCell>Height</TableCell>
                   <TableCell>Mass</TableCell>
                   <TableCell>Birth Year</TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
-              {props.peopleProp.map(row => <Person {...row} />)}
+            <TableBody key="tbody">
+              {props.peopleProp.map(row => <Person {...row} onClick={props.onClick} />)}
             </TableBody>
           </Table>
         </TableContainer>
